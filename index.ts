@@ -32,6 +32,7 @@ const server = Bun.serve({
               <meta charset="UTF-8">
               <title>Defuddle Proxy</title>
               <style>
+                html { color-scheme: dark light; }
                 body { font-family: system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; }
                 form { display: flex; gap: 1rem; margin-bottom: 2rem; }
                 input { flex: 1; padding: 0.5rem; }
@@ -136,8 +137,12 @@ const server = Bun.serve({
             <meta charset="UTF-8">
             <title>${article.title || "Extracted Content"}</title>
             <style>
+              html { color-scheme: dark light; }
               body { font-family: system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; line-height: 1.6; }
               .source { margin-bottom: 2rem; color: #555; border: 1px solid #ccc; padding: 1rem; }
+              @media (prefers-color-scheme: dark) {
+                .source { background-color: #111; color: #ddd; border-color: #333; }
+              }
               h1 { margin-bottom: 1.5rem; }
               img { max-width: 100%; height: auto; }
             </style>
