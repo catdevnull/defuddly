@@ -15,6 +15,7 @@ global.Element = globalDom.window.Element;
 global.Text = globalDom.window.Text;
 global.Comment = globalDom.window.Comment;
 global.CSSMediaRule = globalDom.window.CSSMediaRule;
+global.CSSStyleRule = globalDom.window.CSSStyleRule;
 
 const server = Bun.serve({
   async fetch(req) {
