@@ -34,5 +34,6 @@ COPY --from=prerelease /usr/src/app/package.json .
 
 # run the app
 USER bun
+ENV PORT=3000
 EXPOSE 3000/tcp
-ENTRYPOINT [ "bun", "run", "index.ts" ]
+ENTRYPOINT [ "bun", "run", "--smol", "index.ts" ]
